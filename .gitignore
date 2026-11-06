@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+
+# Large training pipelines and checkpoints (>100MB)
+hotel_cancellation_pipeline.joblib
+hotel_cancellation_pipeline_fast.joblib
+
+# Jupyter Notebooks and scratch
+*.ipynb
+scratch/
+scratch_*
+
+# Environment files
+.env

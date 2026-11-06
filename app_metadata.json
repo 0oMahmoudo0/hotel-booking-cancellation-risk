@@ -1,0 +1,319 @@
+{
+  "prediction_moment": "at_booking",
+  "model_name": "Soft-Voting Ensemble (HGB + XGB)",
+  "num_cols": [
+    "lead_time",
+    "arrival_month",
+    "arrival_date_week_number",
+    "arrival_date_day_of_month",
+    "arrival_dow",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "total_nights",
+    "adults",
+    "children",
+    "babies",
+    "total_guests",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "adr",
+    "has_company",
+    "adr_per_person",
+    "is_domestic",
+    "is_weekend_arrival",
+    "weekend_night_share",
+    "lead_time_log",
+    "prev_cancel_ratio",
+    "booking_month",
+    "booking_dow",
+    "arrival_month_sin",
+    "arrival_month_cos"
+  ],
+  "cat_cols": [
+    "hotel",
+    "meal",
+    "country",
+    "market_segment",
+    "distribution_channel",
+    "reserved_room_type",
+    "deposit_type",
+    "customer_type",
+    "agent"
+  ],
+  "thresholds": {
+    "low": 0.19999999999999998,
+    "high": 0.6470588235294119,
+    "balanced": 0.3305785123966942,
+    "cost_optimal": 0.19999999999999998
+  },
+  "calibrated": true,
+  "how_to_predict": "p = calibrator.predict(pipeline.predict_proba(X)[:, 1])",
+  "cost_assumptions": {
+    "missed_cancel": 1.0,
+    "false_alarm": 0.25
+  },
+  "high_card_cols": [
+    "country",
+    "agent"
+  ],
+  "policy": {
+    "Low": "No deposit",
+    "Medium": "Partial deposit",
+    "High": "Full deposit"
+  },
+  "deposit_protection_rate_assumption": 0.3,
+  "categories": {
+    "hotel": [
+      "City Hotel",
+      "Resort Hotel"
+    ],
+    "meal": [
+      "BB",
+      "FB",
+      "HB",
+      "SC",
+      "Undefined"
+    ],
+    "country": [
+      "AGO",
+      "AUS",
+      "AUT",
+      "BEL",
+      "BRA",
+      "CHE",
+      "CHN",
+      "CN",
+      "DEU",
+      "DNK",
+      "ESP",
+      "FIN",
+      "FRA",
+      "GBR",
+      "HUN",
+      "IRL",
+      "ISR",
+      "ITA",
+      "LUX",
+      "MAR",
+      "NLD",
+      "NOR",
+      "POL",
+      "PRT",
+      "ROU",
+      "RUS",
+      "SWE",
+      "TUR",
+      "USA",
+      "Unknown"
+    ],
+    "market_segment": [
+      "Aviation",
+      "Complementary",
+      "Corporate",
+      "Direct",
+      "Groups",
+      "Offline TA/TO",
+      "Online TA",
+      "Undefined"
+    ],
+    "distribution_channel": [
+      "Corporate",
+      "Direct",
+      "GDS",
+      "TA/TO",
+      "Undefined"
+    ],
+    "reserved_room_type": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "L"
+    ],
+    "deposit_type": [
+      "No Deposit",
+      "Non Refund",
+      "Refundable"
+    ],
+    "customer_type": [
+      "Contract",
+      "Group",
+      "Transient",
+      "Transient-Party"
+    ],
+    "agent": [
+      "1",
+      "10",
+      "11",
+      "138",
+      "14",
+      "15",
+      "16",
+      "171",
+      "177",
+      "196",
+      "22",
+      "240",
+      "241",
+      "242",
+      "243",
+      "250",
+      "27",
+      "28",
+      "3",
+      "314",
+      "37",
+      "40",
+      "6",
+      "7",
+      "8",
+      "83",
+      "85",
+      "9",
+      "96",
+      "None"
+    ]
+  },
+  "numeric_ranges": {
+    "lead_time": [
+      0.0,
+      346.0,
+      49.0
+    ],
+    "arrival_month": [
+      1.0,
+      12.0,
+      7.0
+    ],
+    "arrival_date_week_number": [
+      1.0,
+      53.0,
+      27.0
+    ],
+    "arrival_date_day_of_month": [
+      1.0,
+      31.0,
+      16.0
+    ],
+    "arrival_dow": [
+      0.0,
+      6.0,
+      3.0
+    ],
+    "stays_in_weekend_nights": [
+      0.0,
+      4.0,
+      1.0
+    ],
+    "stays_in_week_nights": [
+      0.0,
+      10.0,
+      2.0
+    ],
+    "total_nights": [
+      1.0,
+      14.0,
+      3.0
+    ],
+    "adults": [
+      0.0,
+      3.0,
+      2.0
+    ],
+    "children": [
+      0.0,
+      2.0,
+      0.0
+    ],
+    "babies": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "total_guests": [
+      1.0,
+      4.0,
+      2.0
+    ],
+    "is_repeated_guest": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "previous_cancellations": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "previous_bookings_not_canceled": [
+      0.0,
+      5.0,
+      0.0
+    ],
+    "adr": [
+      0.0,
+      261.3985999999997,
+      99.0
+    ],
+    "has_company": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "adr_per_person": [
+      0.0,
+      150.0,
+      50.1
+    ],
+    "is_domestic": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "is_weekend_arrival": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "weekend_night_share": [
+      0.0,
+      1.0,
+      0.25
+    ],
+    "lead_time_log": [
+      0.0,
+      5.849324779946859,
+      3.912023005428146
+    ],
+    "prev_cancel_ratio": [
+      0.0,
+      0.5,
+      0.0
+    ],
+    "booking_month": [
+      1.0,
+      12.0,
+      5.0
+    ],
+    "booking_dow": [
+      0.0,
+      6.0,
+      2.0
+    ],
+    "arrival_month_sin": [
+      -1.0,
+      1.0,
+      -2.4492935982947064e-16
+    ],
+    "arrival_month_cos": [
+      -1.0,
+      1.0,
+      -0.4999999999999998
+    ]
+  }
+}
