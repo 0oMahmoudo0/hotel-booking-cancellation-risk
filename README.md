@@ -27,7 +27,7 @@
 
 ## 🚀 Live Application
 
-**Try the application:** [Hotel Booking Cancellation Risk — Live Demo](https://hotel-booking-cancellation-risk.streamlit.app/)
+**Try the application:** [Hotel Booking Cancellation Risk — Live Demo](https://0omahmoudo0-hotel-booking-cancellation-risk-app-99kkpf.streamlit.app/)
 
 Deployed using **Streamlit Community Cloud**.
 
