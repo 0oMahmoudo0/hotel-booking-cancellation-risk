@@ -27,10 +27,6 @@
 
 ## 🚀 Live Application
 
-🔗 **[hotel-booking-cancellation-risk.streamlit.app](https://hotel-booking-cancellation-risk.streamlit.app)** *(Deploy via Streamlit Community Cloud)*
-
-## 🚀 Live Application
-
 **Try the application:** [Hotel Booking Cancellation Risk — Live Demo](https://hotel-booking-cancellation-risk.streamlit.app/)
 
 Deployed using **Streamlit Community Cloud**.
@@ -41,7 +37,7 @@ The application provides an interactive decision-support dashboard that allows h
 
 <p align="center">
   <img
-    src="assets/risk-assessment.png"
+    src="risk-assessment.jpeg"
     alt="Hotel Booking Cancellation Risk - Application Dashboard"
     width="100%"
   />
