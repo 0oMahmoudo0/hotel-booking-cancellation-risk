@@ -30,9 +30,28 @@
 🔗 **[hotel-booking-cancellation-risk.streamlit.app](https://hotel-booking-cancellation-risk.streamlit.app)** *(Deploy via Streamlit Community Cloud)*
 
 ### Interface Preview
+```text
++------------------------------------------------------------------------------------------------+
+|  🏨 Hotel Booking Cancellation Risk                                                           |
+|  Decision support tool for hotel revenue managers                                             |
++------------------------------------------------------------------------------------------------+
+|  [ Stay Information ]       |  [ Guest Demographics ]     |  [ Booking Channel & Details ]    |
+|  - Hotel Type: City/Resort  |  - Adults, Children, Babies |  - Lead Time (Days)               |
+|  - Arrival Date & Nights    |  - Country of Origin        |  - Market Segment & Channel       |
+|  - ADR (€ Price per night)  |  - Repeat Guest Flag        |  - Deposit Type                   |
+|  - Meal Plan & Room Type    |  - Past Cancellation History|  - Booking Agent & Company Flag   |
++------------------------------------------------------------------------------------------------+
+|  [ PREDICT CANCELLATION RISK ]                                                                 |
++------------------------------------------------------------------------------------------------+
+|  📊 Cancellation Probability: 16.7%  |  💰 Booking Value: €297  |  ⚠️ Value at Risk: €50        |
+|  🟢 LOW RISK. Suggested Policy: No deposit required.                                          |
++------------------------------------------------------------------------------------------------+
+|  🔄 What-If Sensitivity Analysis (Top 5 scenarios by impact on risk score)                    |
++------------------------------------------------------------------------------------------------+
 ```
+
 ---
----
+
 ## ✨ Key Features
 
 1. **Non-Technical Revenue Interface**: Built specifically for hotel revenue managers with clear business metrics:
@@ -160,8 +179,6 @@ python -m pytest test_app.py -v
 - ✅ **Risk Escalation**: Confirms prior cancellations monotonically elevate the risk score.
 - ✅ **Boundary & Edge Cases**: Tests extreme and odd inputs (0 children, 60-night stays, zero ADR, past dates, non-listed countries) without runtime exceptions.
 - ✅ **Threshold Partitioning**: Validates exact Low / Medium / High classification boundaries according to metadata specifications.
-
----
 
 ## ⚠️ Model Limitations
 
