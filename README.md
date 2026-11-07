@@ -33,7 +33,8 @@
 ```image
 ![Uploading WhatsApp Image 2026-11-07 at 8.27.37 PM.jpeg…]()
 ---
-
+'''
+---
 ## ✨ Key Features
 
 1. **Non-Technical Revenue Interface**: Built specifically for hotel revenue managers with clear business metrics:
