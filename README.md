@@ -30,10 +30,8 @@
 🔗 **[hotel-booking-cancellation-risk.streamlit.app](https://hotel-booking-cancellation-risk.streamlit.app)** *(Deploy via Streamlit Community Cloud)*
 
 ### Interface Preview
-```image
-![Uploading WhatsApp Image 2026-11-07 at 8.27.37 PM.jpeg…]()
+```
 ---
-'''
 ---
 ## ✨ Key Features
 
