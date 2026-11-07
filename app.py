@@ -45,7 +45,6 @@ COUNTRY_NAMES = {
     "GBR": "United Kingdom",
     "HUN": "Hungary",
     "IRL": "Ireland",
-    "ISR": "Israel",
     "ITA": "Italy",
     "LUX": "Luxembourg",
     "MAR": "Morocco",
@@ -364,7 +363,7 @@ def run_app():
     customer_types = categories.get("customer_type", ["Transient"])
 
     # Country options with friendly names
-    country_codes = categories.get("country", [])
+    country_codes = [c for c in categories.get("country", []) if c != "ISR"]
     def country_label(code: str) -> str:
         name = COUNTRY_NAMES.get(code, code)
         return f"{name} [{code}]" if code != "Unknown" else "Unknown"
