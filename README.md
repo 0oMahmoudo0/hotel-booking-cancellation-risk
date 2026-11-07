@@ -30,26 +30,8 @@
 🔗 **[hotel-booking-cancellation-risk.streamlit.app](https://hotel-booking-cancellation-risk.streamlit.app)** *(Deploy via Streamlit Community Cloud)*
 
 ### Interface Preview
-```text
-+------------------------------------------------------------------------------------------------+
-|  🏨 Hotel Booking Cancellation Risk                                                           |
-|  Decision support tool for hotel revenue managers                                             |
-+------------------------------------------------------------------------------------------------+
-|  [ Stay Information ]       |  [ Guest Demographics ]     |  [ Booking Channel & Details ]    |
-|  - Hotel Type: City/Resort  |  - Adults, Children, Babies |  - Lead Time (Days)               |
-|  - Arrival Date & Nights    |  - Country of Origin        |  - Market Segment & Channel       |
-|  - ADR (€ Price per night)  |  - Repeat Guest Flag        |  - Deposit Type                   |
-|  - Meal Plan & Room Type    |  - Past Cancellation History|  - Booking Agent & Company Flag   |
-+------------------------------------------------------------------------------------------------+
-|  [ PREDICT CANCELLATION RISK ]                                                                 |
-+------------------------------------------------------------------------------------------------+
-|  📊 Cancellation Probability: 16.7%  |  💰 Booking Value: €297  |  ⚠️ Value at Risk: €50        |
-|  🟢 LOW RISK. Suggested Policy: No deposit required.                                          |
-+------------------------------------------------------------------------------------------------+
-|  🔄 What-If Sensitivity Analysis (Top 5 scenarios by impact on risk score)                    |
-+------------------------------------------------------------------------------------------------+
-```
-
+```image
+![Uploading WhatsApp Image 2026-11-07 at 8.27.37 PM.jpeg…]()
 ---
 
 ## ✨ Key Features
