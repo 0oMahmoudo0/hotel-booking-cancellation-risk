@@ -182,21 +182,6 @@ python -m pytest test_app.py -v
 
 ---
 
-## ☁️ Deployment on Streamlit Cloud
-
-To host this project on **[Streamlit Community Cloud](https://share.streamlit.io/)**:
-
-1. Fork or push this repository to your GitHub account.
-2. In Streamlit Cloud, click **New app**.
-3. Configure repository settings:
-   - **Repository:** `0oMahmoudo0/hotel-booking-cancellation-risk`
-   - **Branch:** `main`
-   - **Main file path:** `app.py`
-4. Under **Advanced settings**, set the **Python version** to **`3.12`** or **`3.13`**.
-5. Click **Deploy!**
-
----
-
 ## ⚠️ Model Limitations
 
 - **Booking-Time Horizon**: The model intentionally avoids post-booking data. Changes occurring between booking and arrival (e.g., flight disruptions, room upgrades upon check-in) cannot be anticipated by this model.
