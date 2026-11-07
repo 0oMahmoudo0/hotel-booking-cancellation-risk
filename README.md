@@ -71,11 +71,11 @@ The operational thresholds were tuned based on business cost trade-offs between 
 
 | Risk Band | Probability Range | Actionable Policy | Business Objective |
 |---|---|---|---|
-| 🟢 **Low** | $p < 20.0\%$ | **No deposit** | Frictionless booking; maximize conversion for low-risk guests. |
-| 🟡 **Medium** | $20.0\% \le p < 64.7\%$ | **Partial deposit** | Secure baseline revenue while maintaining competitive conversion. |
-| 🔴 **High** | $p \ge 64.7\%$ | **Full deposit** | Guard against high-probability cancellations; cover inventory holding costs. |
+| 🟢 **Low** | p < 20.0% | **No deposit** | Frictionless booking; maximize conversion for low-risk guests. |
+| 🟡 **Medium** | 20.0% ≤ p < 64.7% | **Partial deposit** | Secure baseline revenue while maintaining competitive conversion. |
+| 🔴 **High** | p ≥ 64.7% | **Full deposit** | Guard against high-probability cancellations; cover inventory holding costs. |
 
-*Balanced decision threshold: $p = 33.1\%$ (optimal F1-score balance).*
+*Balanced decision threshold: p = 33.1% (optimal F1-score balance).*
 
 ---
 
@@ -95,11 +95,14 @@ flowchart LR
 ```
 
 ### Feature Engineering Highlights
-- **Temporal & Calendar Dynamics**: Derived ISO week numbers, day-of-week indexes, and cyclical month transformations ($\sin$ / $\cos$ trigonometric encodings).
+- **Temporal & Calendar Dynamics**: Derived ISO week numbers, day-of-week indexes, and cyclical month transformations (`sin` and `cos` trigonometric encodings).
 - **Stay Architecture**: Segregation of weekend nights vs. week nights and `weekend_night_share`.
-- **Lead Time Transformations**: Non-linear logarithmic scaling ($\ln(1 + \text{lead\_time})$) to capture saturation effects.
-- **Guest History Ratio**: Historical cancellation frequency calculated as $\frac{\text{previous\_cancellations}}{\text{previous\_cancellations} + \text{previous\_stays} + 1}$.
-- **Rate Distribution**: Per-person average daily rate (`adr_per_person`).
+- **Lead Time Transformations**: Non-linear logarithmic scaling `log1p(lead_time)` to capture saturation effects.
+- **Guest History Ratio**: Historical cancellation frequency calculated as:
+  ```text
+  prev_cancel_ratio = previous_cancellations / (previous_cancellations + previous_bookings_not_canceled + 1)
+  ```
+- **Rate Distribution**: Per-person average daily rate (`adr_per_person = adr / total_guests`).
 
 ---
 
