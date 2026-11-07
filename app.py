@@ -333,7 +333,6 @@ def run_app():
         with st.expander("About the model and its limits"):
             st.markdown(
                 """
-                - **Data source:** Real hotel bookings from two hotels in Portugal (2015–2017).
                 - **Features:** Only information available at the time of booking is used.
                 - **Future drift:** Accuracy on future bookings is naturally lower than on historical data.
                 - **Thresholds:** Derived from assumed business cost trade-offs (missed cancel vs. false alarm).
